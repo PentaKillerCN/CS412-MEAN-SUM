@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    if originalString
+        h1 The original string from POST: #{originalString}
+        h1 The length of the string: #{stringLength}
+    else
+        h1 The value passed from GET: #{string}
