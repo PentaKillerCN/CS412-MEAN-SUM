@@ -24,10 +24,6 @@ describe('PS4 Weather API Testing', () => {
     it('Return 404 error code when requested with GET method', function (done) {
         chai.request(app)
             .get('/ps4')
-            .type('form')
-            .send({
-                'city': 'boston',
-            })
             .end((err, response) => {
                 expect(response).to.have.status(404);
                 done();
