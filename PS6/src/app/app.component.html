@@ -2,7 +2,6 @@
 
 <div name="outerList">
   <ul *ngFor="let city of weather">
-
     <li>{{city.cityName}}</li>
     <button (click)="showWeatherInfo(city.cityName)">See Weather</button>
   </ul>
@@ -10,9 +9,9 @@
 
 <div name="details" *ngIf="selectedCity">
   <p>
-    <li>Weather is: {{selectedCity.main}}</li>
     <li>Temperature is: {{selectedCity.temperature}}C</li>
     <li>Humidity is: {{selectedCity.humidity}}%</li>
+    <li>Cached before: {{selectedCity.cachedBefore}}</li>
 
 </div>
 
