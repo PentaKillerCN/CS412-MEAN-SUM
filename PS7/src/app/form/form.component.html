@@ -1,0 +1,11 @@
+<div style="text-align: center">
+<form [formGroup]="weatherFormGroup" (ngSubmit)="getWeatherByCity()">
+  Enter the city you would like to search for: <br>
+  <input formControlName="cityControl"> <br>
+  <br>
+  Enter the units you would like the data to display: <br>
+  <input formControlName="unitsControl"> <br>
+  <br>
+  <button type="submit">Submit</button>
+</form>
+</div>

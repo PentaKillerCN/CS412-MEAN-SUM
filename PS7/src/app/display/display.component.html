@@ -1,0 +1,16 @@
+<div name="outerList">
+  <p>
+  <ul *ngFor="let city of data" style="list-style-type:square; display: flex; justify-content: center">
+    <li>{{city['cityName']}}</li>
+    <button (click)="showWeatherInfo(city['cityName'])">See Weather</button> <br>
+  </ul>
+</div>
+
+<div name="details" *ngIf="selectedCity">
+  <p style="text-align: center">
+    Temperature is: {{selectedCity['temperature']}}C <br>
+    Humidity is: {{selectedCity['humidity']}}% <br>
+    From cache: {{selectedCity['cachedBefore']}} <br>
+
+</div>
+
